@@ -244,5 +244,5 @@ if (document.readyState === 'loading') {
   ThemeManager.init();
 }
 
-// Export for ES6 modules
+// Export the ThemeManager module
 export default ThemeManager;

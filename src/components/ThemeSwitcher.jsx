@@ -29,12 +29,7 @@ export default function ThemeSwitcher() {
       {/* Theme Switcher Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 hover:opacity-80"
-        style={{
-          backgroundColor: 'var(--bg-secondary)',
-          color: 'var(--text-primary)',
-          border: '1px solid var(--border-color)'
-        }}
+        className="flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 hover:opacity-80 theme-bg-secondary theme-text-primary theme-border-full"
         aria-label="Switch theme"
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -67,11 +62,7 @@ export default function ThemeSwitcher() {
           
           {/* Dropdown Content */}
           <div 
-            className="absolute right-0 mt-2 w-56 rounded-lg shadow-lg z-20 overflow-hidden"
-            style={{
-              backgroundColor: 'var(--bg-secondary)',
-              border: '1px solid var(--border-color)'
-            }}
+            className="absolute right-0 mt-2 w-56 rounded-lg shadow-lg z-20 overflow-hidden theme-bg-secondary theme-border-full"
             role="menu"
             aria-orientation="vertical"
           >
@@ -84,21 +75,7 @@ export default function ThemeSwitcher() {
                   <button
                     key={themeName}
                     onClick={() => handleThemeSelect(themeName)}
-                    className="w-full text-left px-4 py-3 flex items-center gap-3 transition-all duration-150"
-                    style={{
-                      backgroundColor: isActive ? 'var(--bg-tertiary)' : 'transparent',
-                      color: 'var(--text-primary)'
-                    }}
-                    onMouseEnter={(e) => {
-                      if (!isActive) {
-                        e.currentTarget.style.backgroundColor = 'var(--bg-tertiary)';
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (!isActive) {
-                        e.currentTarget.style.backgroundColor = 'transparent';
-                      }
-                    }}
+                    className={`w-full text-left px-4 py-3 flex items-center gap-3 transition-all duration-150 hover:theme-bg-tertiary ${isActive ? 'theme-bg-tertiary' : ''} theme-text-primary`}
                     role="menuitem"
                     aria-current={isActive ? 'true' : 'false'}
                   >

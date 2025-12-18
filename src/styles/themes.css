@@ -196,6 +196,19 @@ body.no-transition * {
   box-shadow: 0 10px 15px -3px var(--shadow-color);
 }
 
+.theme-border-full {
+  border: 1px solid var(--border-color);
+}
+
+.theme-border-profile {
+  border: 3px solid var(--border-color);
+}
+
+/* Hover effects */
+.hover\:theme-bg-tertiary:hover {
+  background-color: var(--bg-tertiary);
+}
+
 /* ============================================
    CUSTOM SCROLLBAR THEMING
    ============================================ */
