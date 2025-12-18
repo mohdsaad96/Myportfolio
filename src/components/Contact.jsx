@@ -8,7 +8,7 @@ export default function Contact(){
         <form action="https://formspree.io/f/xanykyqb" method="POST" className="grid grid-cols-1 gap-3">
           <input name="name" placeholder="MOHD SAAD" className="border p-2 rounded" required/>
           <input name="email" placeholder="msaadm96@gmail.com" className="border p-2 rounded" type="email" required/>
-          <textarea name="message" placeholder="Civil Engineer & 3D Visualizer — AutoCAD, SketchUp, V-Ray, Enscape" className="border p-2 rounded" rows="5" required/>
+          <textarea name="message" placeholder="To Contact Please Send Message" className="border p-2 rounded" rows="5" required/>
           <button type="submit" className="px-4 py-2 bg-black text-white rounded">Send</button>
         </form>
         <p className="mt-3 text-sm text-gray-600">Or to email: <a href="mailto:msaadm96@gmail.com" className="underline">msaadm96@gmail.com</a></p>
