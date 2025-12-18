@@ -12,6 +12,10 @@ export default function About(){
             <li>AutoCAD</li>
             <li>SketchUp + V-Ray</li>
             <li>Enscape</li>
+            <li>MS Office</li>
+            <li>Tally</li>
+            <li>Adobe Photoshop</li>
+            <li>Python with AI</li>
             <li>HTML/CSS/React</li>
           </ul>
         </div>
