@@ -1,0 +1,236 @@
+/* ============================================
+   THEME SYSTEM - CSS Custom Properties
+   ============================================ */
+
+/* Default root variables (Dark Theme) */
+:root {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  
+  --text-primary: #f5f5f5;
+  --text-secondary: #b0b0b0;
+  --text-muted: #6b6b6b;
+  
+  --accent-primary: #60a5fa;
+  --accent-secondary: #818cf8;
+  --accent-tertiary: #a78bfa;
+  
+  --border-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  
+  --success-color: #34d399;
+  --warning-color: #fbbf24;
+  --error-color: #f87171;
+  
+  /* Smooth transitions */
+  --transition-speed: 0.3s;
+}
+
+/* ============================================
+   LIGHT THEME - Clean, minimal, professional
+   ============================================ */
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  
+  --accent-primary: #3b82f6;
+  --accent-secondary: #2563eb;
+  --accent-tertiary: #1d4ed8;
+  
+  --border-color: #e5e7eb;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+}
+
+/* ============================================
+   DARK THEME - Sleek, modern, easy on eyes
+   ============================================ */
+[data-theme="dark"] {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2a2a2a;
+  
+  --text-primary: #f5f5f5;
+  --text-secondary: #b0b0b0;
+  --text-muted: #6b6b6b;
+  
+  --accent-primary: #60a5fa;
+  --accent-secondary: #818cf8;
+  --accent-tertiary: #a78bfa;
+  
+  --border-color: #333333;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  
+  --success-color: #34d399;
+  --warning-color: #fbbf24;
+  --error-color: #f87171;
+}
+
+/* ============================================
+   CYBERPUNK THEME - Bold, futuristic, high contrast
+   ============================================ */
+[data-theme="cyberpunk"] {
+  --bg-primary: #0a0015;
+  --bg-secondary: #1a0033;
+  --bg-tertiary: #2d1b4e;
+  
+  --text-primary: #ffffff;
+  --text-secondary: #e0d1ff;
+  --text-muted: #9d7bd8;
+  
+  --accent-primary: #ff006e;
+  --accent-secondary: #00f0ff;
+  --accent-tertiary: #8b5cf6;
+  
+  --border-color: #ff006e;
+  --shadow-color: rgba(255, 0, 110, 0.3);
+  
+  --success-color: #00f0ff;
+  --warning-color: #ffbe0b;
+  --error-color: #ff006e;
+}
+
+/* Cyberpunk glow effects */
+[data-theme="cyberpunk"] .glow {
+  text-shadow: 0 0 10px var(--accent-primary),
+               0 0 20px var(--accent-primary),
+               0 0 30px var(--accent-primary);
+}
+
+[data-theme="cyberpunk"] .border-glow {
+  box-shadow: 0 0 10px var(--accent-primary),
+              0 0 20px var(--accent-primary),
+              inset 0 0 10px rgba(255, 0, 110, 0.2);
+}
+
+/* ============================================
+   PASTEL THEME - Soft, dreamy, aesthetic
+   ============================================ */
+[data-theme="pastel"] {
+  --bg-primary: #fef5ff;
+  --bg-secondary: #f0e7ff;
+  --bg-tertiary: #e6f7f5;
+  
+  --text-primary: #4a2c4a;
+  --text-secondary: #6b5068;
+  --text-muted: #9d8099;
+  
+  --accent-primary: #c084fc;
+  --accent-secondary: #f0abfc;
+  --accent-tertiary: #86efac;
+  
+  --border-color: #e9d5ff;
+  --shadow-color: rgba(192, 132, 252, 0.15);
+  
+  --success-color: #86efac;
+  --warning-color: #fde68a;
+  --error-color: #fca5a5;
+}
+
+/* ============================================
+   GLOBAL THEME TRANSITIONS
+   ============================================ */
+body,
+body * {
+  transition: background-color var(--transition-speed) ease,
+              color var(--transition-speed) ease,
+              border-color var(--transition-speed) ease,
+              box-shadow var(--transition-speed) ease;
+}
+
+/* Prevent transition on page load */
+body.no-transition,
+body.no-transition * {
+  transition: none !important;
+}
+
+/* ============================================
+   THEME-AWARE UTILITY CLASSES
+   ============================================ */
+.theme-bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.theme-bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.theme-bg-tertiary {
+  background-color: var(--bg-tertiary);
+}
+
+.theme-text-primary {
+  color: var(--text-primary);
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+.theme-text-muted {
+  color: var(--text-muted);
+}
+
+.theme-accent-primary {
+  color: var(--accent-primary);
+}
+
+.theme-border {
+  border-color: var(--border-color);
+}
+
+.theme-shadow {
+  box-shadow: 0 1px 3px 0 var(--shadow-color);
+}
+
+.theme-shadow-lg {
+  box-shadow: 0 10px 15px -3px var(--shadow-color);
+}
+
+.theme-border-full {
+  border: 1px solid var(--border-color);
+}
+
+.theme-border-profile {
+  border: 3px solid var(--border-color);
+}
+
+/* Hover effects */
+.hover\:theme-bg-tertiary:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR THEMING
+   ============================================ */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) var(--bg-secondary);
+}
