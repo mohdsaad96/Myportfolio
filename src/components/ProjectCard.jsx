@@ -24,17 +24,17 @@ function resolveImageSrc(image){
 export default function ProjectCard({title, description, tech, live, code, image}){
   const src = resolveImageSrc(image)
   return (
-    <article className="border rounded p-4 flex flex-col">
+    <article className="rounded p-4 flex flex-col theme-bg-secondary theme-border transition-all duration-200 hover:theme-shadow-lg" style={{ border: '1px solid var(--border-color)' }}>
       <img src={src} alt={title} className="h-40 object-cover rounded mb-3"/>
-      <h3 className="font-semibold text-lg">{title}</h3>
-      <p className="text-sm text-gray-600 mt-2 flex-grow">{description}</p>
+      <h3 className="font-semibold text-lg theme-text-primary">{title}</h3>
+      <p className="text-sm mt-2 flex-grow theme-text-secondary">{description}</p>
       <div className="mt-3 flex items-center justify-between">
         <div className="text-sm space-x-2">
-          {tech.map(t => <span key={t} className="inline-block text-xs px-2 py-1 border rounded">{t}</span>)}
+          {tech.map(t => <span key={t} className="inline-block text-xs px-2 py-1 rounded theme-border theme-text-secondary" style={{ border: '1px solid var(--border-color)' }}>{t}</span>)}
         </div>
         <div className="space-x-2">
-          <a href={live || '#'} target="_blank" rel="noreferrer" className="text-sm underline">Live</a>
-          <a href={code || '#'} target="_blank" rel="noreferrer" className="text-sm underline">Code</a>
+          <a href={live || '#'} target="_blank" rel="noreferrer" className="text-sm underline transition-colors duration-200" style={{ color: 'var(--accent-primary)' }}>Live</a>
+          <a href={code || '#'} target="_blank" rel="noreferrer" className="text-sm underline transition-colors duration-200" style={{ color: 'var(--accent-primary)' }}>Code</a>
         </div>
       </div>
     </article>
