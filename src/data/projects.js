@@ -1,3 +1,14 @@
+// Import all project images
+import project3_1 from '../assets/enscape project3.png'
+import project3_2 from '../assets/enscape project3 (2).png'
+import project2_1 from '../assets/enscape project2 (2).png'
+import project2_2 from '../assets/enscape project2 (3).png'
+import project4_1 from '../assets/enscape project4 (2).png'
+import project4_2 from '../assets/enscape project4(3).png'
+import project1_1 from '../assets/enscape project 1.png'
+import project1_2 from '../assets/enscape project 1 (3).png'
+import project1_3 from '../assets/enscape project 1 (2).png'
+
 const projects = [
   {
     id: 1,
@@ -6,8 +17,7 @@ const projects = [
     tech: ['SketchUp','Enscape','AutoCAD'],
     live: '#',
     code: '#',
-    image: ['/src/assets/enscape project3.png',
-            '/src/assets/enscape project3 (2).png'],
+    image: [project3_1, project3_2],
   },
   {
     id: 2,
@@ -16,8 +26,7 @@ const projects = [
     tech: ['AutoCAD','Vray','SketchUp'],
     live: '#',
     code: '#',
-    image: ['/src/assets/enscape project2 (2).png',
-           '/src/assets/enscape project2 (3).png'],
+    image: [project2_1, project2_2],
   },
   {
     id: 3,
@@ -26,8 +35,7 @@ const projects = [
     tech: ['SketchUp','Enscape','AutoCAD'],
     live: '#',
     code: '#',
-    image: ['/src/assets/enscape project4 (2).png',
-           '/src/assets/enscape project4(3).png'],
+    image: [project4_1, project4_2],
   },
   {
     id: 4,
@@ -36,9 +44,7 @@ const projects = [
     tech: ['SketchUp','Enscape','AutoCAD'],
     live: '#',
     code: '#',
-    image: ['/src/assets/enscape project 1.png',
-          '/src/assets/enscape project 1 (3).png',
-         '/src/assets/enscape project 1 (2).png']
+    image: [project1_1, project1_2, project1_3]
   },
 ];
 
