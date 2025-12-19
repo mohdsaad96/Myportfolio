@@ -3,7 +3,7 @@ import fallbackImage from '../assets/profile-placeholder.png'
 
 export default function ProjectCard({title, description, tech, live, code, image}){
   // Extract the first image from the array if multiple images exist
-  const src = Array.isArray(image) ? image[0] : image || fallbackImage
+  const src = Array.isArray(image) ? (image[0] || fallbackImage) : (image || fallbackImage)
   
   return (
     <article className="border rounded p-4 flex flex-col hover:shadow-md transition">
