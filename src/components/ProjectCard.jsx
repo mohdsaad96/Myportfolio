@@ -3,22 +3,12 @@ import fallbackImage from '../assets/profile-placeholder.png'
 
 function resolveImageSrc(image){
   const fallback = fallbackImage
-  let img = image
-  if (Array.isArray(img)) {
-    img = img[0]
+  // If image is an array, use the first element
+  if (Array.isArray(image)) {
+    return image[0] || fallback
   }
-  if (typeof img === 'string') {
-    try {
-      if (img.startsWith('/src/assets/')) {
-        const rel = img.replace('/src/', '../')
-        return new URL(rel, import.meta.url).href
-      }
-      return img
-    } catch {
-      return fallback
-    }
-  }
-  return fallback
+  // Otherwise return the image or fallback
+  return image || fallback
 }
 
 export default function ProjectCard({title, description, tech, live, code, image}){
